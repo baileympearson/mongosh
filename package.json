@@ -32,7 +32,7 @@
     "test-apistrict-ci": "lerna run --stream test-apistrict-ci",
     "test-connectivity": "lerna run --stream test-connectivity",
     "test-nodedriver": "node scripts/replace-package.js && npm run bootstrap -- --no-ci && npm run compile-ts && npm run test-ci-nocoverage",
-    "compile-ts": "lerna run compile-ts",
+    "compile-ts": "lerna run --no-bail compile-ts",
     "compile-cli": "lerna run compile-ts --scope @mongosh/cli-repl --include-dependencies",
     "prestart-cli": "npm run compile-cli",
     "start-cli": "lerna exec npm start --scope @mongosh/cli-repl",
