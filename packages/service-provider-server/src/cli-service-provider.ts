@@ -704,6 +704,7 @@ class CliServiceProvider extends ServiceProviderCore implements ServiceProvider 
    *
    * @returns {Promise} The promise of the result.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   async insertOne(
     database: string,
     collection: string,
@@ -920,6 +921,7 @@ class CliServiceProvider extends ServiceProviderCore implements ServiceProvider 
    * @param {Object} dbOptions - The database options (i.e. readConcern, writeConcern. etc).
    * @return {Promise}
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   async createIndexes(
     database: string,
     collection: string,
@@ -944,6 +946,7 @@ class CliServiceProvider extends ServiceProviderCore implements ServiceProvider 
    *
    * @return {Promise}
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getIndexes(
     database: string,
     collection: string,
@@ -987,6 +990,7 @@ class CliServiceProvider extends ServiceProviderCore implements ServiceProvider 
    *
    * @return {Promise}
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   async dropCollection(
     database: string,
     collection: string,

@@ -46,9 +46,9 @@ describe('arg-mapper.mapCliToDriver', () => {
   context('when cli args have quiet', () => {
     const cliOptions: CliOptions = { quiet: true };
 
-    it('maps to loggerLevel', () => {
+    it('does not set anything in the driver', () => {
       expect(optionsTest(cliOptions)).to.deep.equal({
-        driver: { loggerLevel: 'error' }
+        driver: { }
       });
     });
   });
@@ -56,9 +56,9 @@ describe('arg-mapper.mapCliToDriver', () => {
   context('when cli args have verbose', () => {
     const cliOptions: CliOptions = { verbose: true };
 
-    it('maps to loggerLevel', () => {
+    it('does not set anything in the driver', () => {
       expect(optionsTest(cliOptions)).to.deep.equal({
-        driver: { loggerLevel: 'debug' }
+        driver: { }
       });
     });
   });
